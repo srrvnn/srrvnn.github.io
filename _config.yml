@@ -9,18 +9,18 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
+title:               'web logs'
+tagline:             'of @srrvnn'
 description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+url:                 http://srrvnn.info
 baseurl:             /
-paginate:            5
+paginate:            
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Saravanan Ganesh
+  url:               https://twitter.com/srrvnn
+  email:             srrvnn@live.com
 
 # Custom vars
 version:             1.0.0
