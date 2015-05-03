@@ -1,0 +1,25 @@
+.last-seen {
+
+  margin-top: 0px;
+  margin-bottom: 40px;
+  /*padding-top: 10px;*/
+  /*border-top: 1px solid #50ca92;*/
+
+  font-style: italic;
+}
+
+#logs {
+
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.log {
+
+  margin: 20px 0;
+}
+
+.log > span {
+
+  float: right;
+}
