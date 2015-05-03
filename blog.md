@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+content: blog
+title: web logs of @srrvnn
 ---
 
 <div class="posts">

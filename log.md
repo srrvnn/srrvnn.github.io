@@ -1,6 +1,7 @@
 ---
 layout: page
-title: learning logs.
+title: logs
+heading: learning logs.
 ---
 
 <div id="logs"> <div id="log"> it's either an emergency or something is wrong with the Google Sheets API. </div> </div>

@@ -1,7 +1,8 @@
 ---
 layout: page
-href: /about
-title: learn. rinse and repeat.
+content: about
+title: about @srrvnn
+heading: learn. rinse and repeat.
 ---
 
 <small class="last-seen"> currently learning from <span id="link"></span>, started about <span id="time"> </span>. </small>
@@ -52,7 +53,7 @@ request.onload = function() {
     aLink.className = 'mild';
 
     var aTime = document.createElement('a');
-    aTime.href = '/logs';
+    aTime.href = '/log';
     aTime.innerHTML = mostRecentRecency;
 
     // append them on the page
