@@ -1,11 +1,23 @@
-.last-seen {
+p {
 
-  margin-top: 0px;
-  margin-bottom: 40px;
-  /*padding-top: 10px;*/
-  /*border-top: 1px solid #50ca92;*/
+  font-size: 16px;
+  line-height: 32px;
+}
 
-  font-style: italic;
+a.mild {
+  color: #8B8585 !important;
+}
+
+a.cham {
+  color: #515151 !important;
+}
+
+.mantra {
+
+  display: inline-block;
+  height: 64px; /* two lines */
+
+  opacity: 0;
 }
 
 #logs {

@@ -73,9 +73,6 @@ a {
 a strong {
   color: inherit;
 }
-a.mild {
-  color: #90a19a !important;
-}
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {

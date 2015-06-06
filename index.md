@@ -2,12 +2,11 @@
 layout: page
 content: about
 title: about @srrvnn
-heading: learn. rinse and repeat.
 ---
 
-<small class="last-seen"> currently learning from <span id="link"></span>, started about <span id="time"> </span>. </small>
-
 saravanan is another guy with a computer who religiously believes in learning, creating, and happiness. he wants to solve every problem there is and he attempts to do it one commit at a time.
+
+<span class="mantra"> he lives by the mantra: <em> learn. rinse and repeat. </em> and is currently learning from <span id="link"></span>, and he started about <span id="time"> </span>. </span>
 
 see him [code](http://github.com/srrvnn), [tweet](http://twitter.com/@srrvnn), or [connect](http://linkedin.com/in/srrvnn). even better, [challenge](mailto:srrvnn@live.com?subject=Hello) his zero inbox strategy.
 
@@ -61,13 +60,20 @@ request.onload = function() {
     document.querySelector('#link').appendChild(aLink);
     document.querySelector('#time').appendChild(aTime);
 
+    // fade in the learning intro
+
+    document.querySelector('.mantra').style.transition = 'opacity 0.1s';
+    document.querySelector('.mantra').style.opacity = 1;
+
   } else {
+
     // We reached our target server, but it returned an error
 
   }
 };
 
 request.onerror = function() {
+
   // There was a connection error of some sort
 };
 
