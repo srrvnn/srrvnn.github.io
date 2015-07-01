@@ -2,6 +2,7 @@
 layout: page
 content: about
 title: about @srrvnn
+heading: about
 ---
 
 saravanan is another guy with a computer who religiously believes in learning, creating, and happiness. he wants to solve every problem there is and he attempts to do it one commit at a time.
@@ -64,6 +65,7 @@ request.onload = function() {
 
     document.querySelector('.mantra').style.transition = 'opacity 0.1s';
     document.querySelector('.mantra').style.opacity = 1;
+
 
   } else {
 
