@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scaffolding a MEAN application
-published: true
+published: false
 categories:
 ---
 
