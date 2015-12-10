@@ -9,9 +9,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               'web logs of @srrvnn'
+title:               'web logs'
 tagline:             ''
-description:         'web logs of @srrvnn'
+description:         'web and learning logs of @srrvnn'
 url:                 http://srrvnn.me
 baseurl:             /
 

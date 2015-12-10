@@ -13,8 +13,12 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-              <a href="/blog" title="Home">{{ site.title }}</a>
-              <a href="/" title="About">about</a>
+              <a href="/blog" class="{% if page.url == '/blog/' %}highlight{% endif %}"
+                title="Home">{{ site.title }}</a>
+              <a href="/log" class="{% if page.url == '/log/' %}highlight{% endif %}"
+                title="Learning">learning logs</a>
+              <a href="/" class="{% if page.url == '/' %}highlight{% endif %}"
+                title="About">about @srrvnn</a>
           </h3>
           </h3>
         </div>
