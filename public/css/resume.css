@@ -1,0 +1,102 @@
+.resume {
+
+    position: absolute;
+    max-width: 980px;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    border: solid #ececec;
+    border-width: 1px 1px;
+    padding: 50px 50px;
+
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: black;
+}
+
+.resume .buttons {
+
+    display: none;
+    position: absolute;
+    right: -100px;
+    top: 30px;
+}
+
+.resume .buttons ul {
+
+    list-style: none;
+}
+
+.resume .buttons li {
+
+    margin: 20px 0;
+}
+
+.resume .buttons i {
+
+    font-size: 25px;
+    background-color: #A3F1CD;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    line-height: 50px;
+    text-align: center;
+}
+
+.resume .heading {
+
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 40px;
+
+    /*background-color: aliceblue;*/
+}
+
+.resume .heading a {
+
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 18px;
+    float: right;
+}
+
+.resume h5 {
+
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.section-item,
+.section-heading,
+.section-content {
+
+    margin: 5px 0;
+    line-height: 28px;
+}
+
+.section-heading {
+
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.section.education .section-heading,
+.section.skills .section-heading span {
+
+    font-weight: 500;
+}
+
+.section.education .section-heading,
+.section.skills .section-heading {
+
+    margin-top: 10px;
+}
+
+.section.education .section-heading span,
+.section.experience .section-heading span {
+
+    font-weight: 500;
+    float: right;
+}
