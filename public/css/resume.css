@@ -83,6 +83,7 @@
 }
 
 .section.education .section-heading,
+.section.contact .section-heading,
 .section.skills .section-heading span {
 
     font-weight: 500;
@@ -99,4 +100,11 @@
 
     font-weight: 500;
     float: right;
+}
+
+.section.contact .section-heading {
+
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid black;
 }

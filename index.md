@@ -7,7 +7,7 @@ heading: about
 
 saravanan is another guy with a computer who religiously believes in learning, creating, and happiness. he wants to solve every problem there is and he attempts to do it one commit at a time.
 
-see him [code](http://github.com/srrvnn) &mdash; [tweet](http://twitter.com/@srrvnn) &mdash; [connect](http://linkedin.com/in/srrvnn). even better &mdash; [challenge](mailto:srrvnn@live.com?subject=Hello) his zero inbox strategy, or skim his &mdash; [resume](https://drive.google.com/file/d/0Bx0XKyC27t5TUF8tbWlLSWw1LWs/view).
+see him [code](http://github.com/srrvnn) &mdash; [tweet](http://twitter.com/@srrvnn) &mdash; [connect](http://linkedin.com/in/srrvnn). even better &mdash; [challenge](mailto:srrvnn@live.com?subject=Hello) his zero inbox strategy, or skim his &mdash; [resume](/resume).
 
 <span class="mantra"> he lives by the mantra: <em> learn. rinse and repeat. </em> and is currently learning from <span id="link"></span>, and that was <span id="time"> </span>. </span>
 
