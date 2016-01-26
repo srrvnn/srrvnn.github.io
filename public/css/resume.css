@@ -17,7 +17,7 @@
 .resume .starter {
 
     height: 10px;
-    width: 50px;
+    width: 40px;
     position: absolute;
     right: -50px;
     top: 145px;
@@ -136,26 +136,35 @@
 
 /* animate resume */
 
-.resume.animate .starter::before {
+/*.resume.animate {
 
     animation: rtl 100ms;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
+}*/
+
+.resume.animate .starter::before {
+
+    animation: rtl 200ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
-.resume.animate .section::before {
+/*.resume.animate .section::before {
 
     animation: rtl 200ms;
     animation-timing-function: ease-in;
     animation-delay: 100ms;
-}
+}*/
 
 @keyframes rtl {
   0%   { background-image: linear-gradient(to left, white, white); }
-  10%   { background-image: linear-gradient(to left, #A3F1CD, white); }
-  25%   { background-image: linear-gradient(to left, white, #A3F1CD 25%, white 26%, white); }
-  50%   { background-image: linear-gradient(to left, white, #A3F1CD, 50%, white 51%, white); }
-  75%   { background-image: linear-gradient(to left, white, #A3F1CD, 75%, white 76%, white); }
-  90% { background-image: linear-gradient(to left, white, white 91%, #A3F1CD); }
-  100% { background-image: linear-gradient(to left, white, white); }
+  12.5%   { background-image: linear-gradient(to left, white, white 0%, #A3F1CD 12.5%, white 32.5%, white); }
+  25.0%   { background-image: linear-gradient(to left, white, white 5.0%, #A3F1CD 25.0%, white 45.0%, white); }
+  37.5%   { background-image: linear-gradient(to left, white, white 17.5%, #A3F1CD 37.5%, white 57.5%, white); }
+  50.0%   { background-image: linear-gradient(to left, white, white 30.0%, #A3F1CD 50.0%, white 70.0%, white); }
+  67.5%   { background-image: linear-gradient(to left, white, white 47.5%, #A3F1CD 67.5%, white 87.5%, white); }
+  75.0%   { background-image: linear-gradient(to left, white, white 55.0%, #A3F1CD 75.0%, white 95.0%, white); }
+  87.5%   { background-image: linear-gradient(to left, white, white 67.5%, #A3F1CD 87.5%, white 100%, white); }
+  100%   { background-image: linear-gradient(to left, white, white); }
 }
