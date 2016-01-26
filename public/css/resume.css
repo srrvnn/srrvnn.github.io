@@ -7,16 +7,32 @@
     margin: 10px auto;
     border: solid #ececec;
     border-width: 1px 1px;
-    padding: 50px 50px;
+    padding: 50px 0;
 
     font-family: 'Open Sans';
     font-size: 15px;
     color: black;
 }
 
+.resume .starter {
+
+    height: 10px;
+    width: 50px;
+    position: absolute;
+    right: -50px;
+    top: 145px;
+}
+
+.resume .starter::before,
+.resume .section::before {
+    content: "";
+    height: 2px; /*for horizontal border; width for vertical*/
+    display: block;
+}
+
 .resume .buttons {
 
-    display: none;
+    /*display: none;*/
     position: absolute;
     right: -100px;
     top: 30px;
@@ -68,6 +84,14 @@
     text-transform: uppercase;
 }
 
+.resume .heading,
+.resume .section h5,
+.resume .section-item {
+
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .section-item,
 .section-heading,
 .section-content {
@@ -107,4 +131,31 @@
     margin-top: 30px;
     font-size: 14px;
     border-top: 1px solid black;
+}
+
+
+/* animate resume */
+
+.resume.animate .starter::before {
+
+    animation: rtl 100ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.resume.animate .section::before {
+
+    animation: rtl 200ms;
+    animation-timing-function: ease-in;
+    animation-delay: 100ms;
+}
+
+@keyframes rtl {
+  0%   { background-image: linear-gradient(to left, white, white); }
+  10%   { background-image: linear-gradient(to left, #A3F1CD, white); }
+  25%   { background-image: linear-gradient(to left, white, #A3F1CD 25%, white 26%, white); }
+  50%   { background-image: linear-gradient(to left, white, #A3F1CD, 50%, white 51%, white); }
+  75%   { background-image: linear-gradient(to left, white, #A3F1CD, 75%, white 76%, white); }
+  90% { background-image: linear-gradient(to left, white, white 91%, #A3F1CD); }
+  100% { background-image: linear-gradient(to left, white, white); }
 }

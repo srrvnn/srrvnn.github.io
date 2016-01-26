@@ -5,9 +5,13 @@ title: resume
 heading: resume
 ---
 
-<div class="resume">
+<div id="resume" class="resume">
 
-  <div class="buttons">
+  <div class="starter">
+
+  </div>
+
+  <div class="buttons" id="resume-buttons">
 
     <ul>
 
@@ -41,13 +45,14 @@ heading: resume
         USC Information Sciences Institute
         <span> Directed Research, Machine Learning - May 2013 </span> </div>
 
+        <div class="section-content"></div> </div>
+
     <div class="section-item">
 
       <div class="section-heading">
         Amrita School of Engineering
-        <span> Bachelor of Technology (B.Tech), Computer Science - May 2012 </span> </div>
 
-        <div class="section-content"></div> </div>
+        <span> Bachelor of Technology (B.Tech), Computer Science - May 2012 </span> </div>
 
       <div class="section-content"> </div> </div> </div>
 
@@ -204,3 +209,17 @@ heading: resume
 
       <div class="section-content"> </div> </div> </div>
 </div>
+
+
+<script>
+
+document.getElementById('resume-buttons').addEventListener('click', function() {
+
+    document.getElementById('resume').className = 'resume animate';
+    setTimeout(function() {
+
+        document.getElementById('resume').className = 'resume';
+    }, 1000);
+});
+
+</script>
