@@ -6,7 +6,6 @@
     left: 0;
     right: 0;
     margin: 10px auto;
-    padding: 50px 0;
     font-family: 'Open Sans';
     font-size: 15px;
     color: black;
@@ -15,91 +14,38 @@
     border-width: 0;
 }
 
-.resume .section {
-
-  /*visibility: hidden;*/
-}
-
-.resume .heading,
-.resume .section {
-
-  background-color: white;
-}
-
-.resume .starter {
-
-    height: 10px;
-    position: absolute;
-    right: -50px;
-    top: 145px;
-}
-
-.resume::before {
-
-  content: "";
-  width: 2px;
-  display: block;
-  background-color: #A3F1CD;
-  position: absolute;
-  left: -2px;
-  top: 0;
-}
-
-.resume::after {
-
-  content: "";
-  width: 2px;
-  display: block;
-  background-color: #A3F1CD;
-  position: absolute;
-  right: -2px;
-}
-
-.resume .starter::before {
-
-    content: "";
-    height: 2px; /*for horizontal border; width for vertical*/
-    display: block;
-    background-color: #A3F1CD;
-}
-
-.resume .section {
-
-  position: relative;
-}
-
-.resume .section::before {
-
-    content: "";
-    height: 1px;
-    display: block;
-    background-color: #A3F1CD;
-    /*width: 980px;*/
-    position: absolute;
-    right: -1px;
-    top: -15px;
-}
-
 .resume .heading {
 
-  position: relative;
+    position: relative;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 40px;
 }
 
-.resume .heading::before {
 
-    content: "";
-    height: 2px;
-    display: block;
-    background-color: #A3F1CD;
-    /*width: 980px;*/
-    position: absolute;
-    right: -1px;
-    top: -51px;
+.resume .heading a {
+
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 18px;
+    float: right;
 }
+
+
+.resume .section  {
+
+    position: relative;
+    padding: 15px 0;
+    background-color: white;
+}
+
 
 .resume .buttons {
 
-    /*display: none;*/
     position: absolute;
     right: -100px;
     top: 30px;
@@ -127,34 +73,20 @@
     text-align: center;
 }
 
-.resume .heading {
 
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 28px;
-    line-height: 40px;
+.resume .starter {
 
-    /*background-color: aliceblue;*/
-}
-
-.resume .heading a {
-
-    text-transform: lowercase;
-    font-weight: 500;
-    font-size: 18px;
-    float: right;
+    height: 10px;
+    position: absolute;
+    right: -50px;
+    top: 145px;
 }
 
 .resume h5 {
 
-    /*margin: 0;*/
-    margin-top: 30px;
+    margin: 0;
+    /*margin-top: 30px;*/
     text-transform: uppercase;
-}
-
-.resume .section {
-
-  /*padding-top: 30px;*/
 }
 
 .resume .heading,
@@ -208,14 +140,67 @@
 
 /* ANIMATION ----- */
 
-.resume.animate .starter::before {
+.resume::before {
+
+  content: "";
+  width: 2px;
+  display: block;
+  background-color: #A3F1CD;
+  position: absolute;
+  left: -2px;
+  top: 0;
+}
+
+.resume::after {
+
+  content: "";
+  width: 2px;
+  display: block;
+  background-color: #A3F1CD;
+  position: absolute;
+  right: -2px;
+}
+
+.resume .starter::before {
+
+    content: "";
+    height: 2px; /*for horizontal border; width for vertical*/
+    display: block;
+    background-color: #A3F1CD;
+}
+
+.resume .section::before {
+
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: #A3F1CD;
+    /*width: 980px;*/
+    position: absolute;
+    right: -1px;
+    top: -1px   ;
+}
+
+.resume .heading::before {
+
+    content: "";
+    height: 2px;
+    display: block;
+    background-color: #A3F1CD;
+    /*width: 980px;*/
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+
+.resume .starter::before {
 
     animation: starter-wide 100ms;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
-.resume.animate::after {
+.resume::after {
 
     animation: up-down 300ms;
     animation-timing-function: ease-in;
@@ -223,8 +208,8 @@
     animation-delay: 100ms;
 }
 
-.resume.animate .section::before,
-.resume.animate .heading::before  {
+.resume .section::before,
+.resume .heading::before  {
 
     animation: resume-wide 400ms;
     animation-timing-function: ease-in;
@@ -232,7 +217,7 @@
     animation-delay: 400ms;
 }
 
-.resume.animate::before {
+.resume::before {
 
     animation: down 300ms;
     animation-timing-function: ease-in;
@@ -240,28 +225,19 @@
     animation-delay: 800ms;
 }
 
-.resume.animate {
+.resume {
 
-    animation: border 300ms;
+    animation: broaden 300ms;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     animation-delay: 1100ms;
 }
 
-.resume.animate .heading {
+.resume .section,
+.resume .heading {
 
-    animation: lift-heading 90ms;
-    animation-timing-function: linear;
+    animation: spread 90ms 1600ms linear, lift 500ms 2000ms linear;
     animation-fill-mode: forwards;
-    animation-delay: 1700ms;
-}
-
-.resume.animate .section {
-
-    animation: lift 90ms;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1700ms;
 }
 
 @keyframes starter-wide {
@@ -284,18 +260,17 @@
   100%    { height: 1936px; }
 }
 
-@keyframes border {
+@keyframes broaden {
   100%    { border-width: 0 200px; background-color: #A3F1CD; }
 }
 
-@keyframes lift-heading {
-  0 { top: 0px; }
-  100%    { top: -5px; padding-top: 20px; padding-bottom: 20px; box-shadow: 0 10px 6px -6px #777; }
+@keyframes spread {
+  100%    { margin: 40px 0; }
 }
 
 @keyframes lift {
-  0 { top: 0px; }
-  100%    { top: -5px; box-shadow: 0 10px 6px -6px #777; }
+    0% { top: 0px; box-shadow: 0 0px 6px -6px #777; }
+    100%    { top: -10px; box-shadow: 0 10px 6px -6px #777; }
 }
 
 /*@keyframes rtl2 {
