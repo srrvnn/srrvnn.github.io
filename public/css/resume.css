@@ -6,13 +6,24 @@
     left: 0;
     right: 0;
     margin: 10px auto;
-    border: solid #ececec;
-    border-width: 1px 1px;
     padding: 50px 0;
-
     font-family: 'Open Sans';
     font-size: 15px;
     color: black;
+    box-sizing: content-box;
+    border: solid #A3F1CD;
+    border-width: 0;
+}
+
+.resume .section {
+
+  /*visibility: hidden;*/
+}
+
+.resume .heading,
+.resume .section {
+
+  background-color: white;
 }
 
 .resume .starter {
@@ -82,7 +93,7 @@
     background-color: #A3F1CD;
     /*width: 980px;*/
     position: absolute;
-    right: -51px;
+    right: -1px;
     top: -51px;
 }
 
@@ -136,16 +147,22 @@
 
 .resume h5 {
 
+    /*margin: 0;*/
     margin-top: 30px;
     text-transform: uppercase;
+}
+
+.resume .section {
+
+  /*padding-top: 30px;*/
 }
 
 .resume .heading,
 .resume .section h5,
 .resume .section-item {
 
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .section-item,
@@ -223,6 +240,30 @@
     animation-delay: 800ms;
 }
 
+.resume.animate {
+
+    animation: border 300ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1100ms;
+}
+
+.resume.animate .heading {
+
+    animation: lift-heading 90ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1700ms;
+}
+
+.resume.animate .section {
+
+    animation: lift 90ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1700ms;
+}
+
 @keyframes starter-wide {
   0%      { width: 0px; }
   100%    { width: 50px; }
@@ -243,6 +284,20 @@
   100%    { height: 1936px; }
 }
 
+@keyframes border {
+  100%    { border-width: 0 200px; background-color: #A3F1CD; }
+}
+
+@keyframes lift-heading {
+  0 { top: 0px; }
+  100%    { top: -5px; padding-top: 20px; padding-bottom: 20px; box-shadow: 0 10px 6px -6px #777; }
+}
+
+@keyframes lift {
+  0 { top: 0px; }
+  100%    { top: -5px; box-shadow: 0 10px 6px -6px #777; }
+}
+
 /*@keyframes rtl2 {
   0%   { background-image: linear-gradient(to left, white, white); }
   12.5%   { background-image: linear-gradient(to left, white, white 0%, #A3F1CD 12.5%, white 32.5%, white); }
@@ -254,3 +309,7 @@
   87.5%   { background-image: linear-gradient(to left, white, white 67.5%, #A3F1CD 87.5%, white 100%, white); }
   100%   { background-image: linear-gradient(to left, white, white); }
 }*/
+
+/* SHADOW ----- */
+
+
