@@ -193,87 +193,139 @@
     top: -1px;
 }
 
-.resume .starter::before {
+body.animate .resume .starter::before {
 
-    animation: starter-wide 100ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    -webkit-animation: 100ms ease-in both starter-wide;
 }
 
-.resume::after {
+body.animate .resume::after {
 
-    animation: up-down 300ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 100ms;
+    -webkit-animation: 300ms ease-in 100ms both up-down;
 }
 
-.resume .section::before,
-.resume .heading::before  {
+body.animate .resume .section::before,
+body.animate .resume .heading::before  {
 
-    animation: resume-wide 400ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 400ms;
+    -webkit-animation: 400ms ease-in 400ms both resume-wide;
 }
 
-.resume::before {
+body.animate .resume::before {
 
-    animation: down 300ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 800ms;
+    -webkit-animation: 300ms ease-in 800ms both down;
 }
 
-.resume {
+body.animate {
 
-    animation: broaden 300ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 1100ms;
+    -webkit-animation: 200ms ease-in 1100ms both broaden;
 }
 
-.resume .section,
-.resume .heading {
+body.animate .resume .section,
+body.animate .resume .heading {
 
-    animation: spread 90ms 1600ms linear, lift 500ms 2000ms linear;
-    animation-fill-mode: forwards;
+    -webkit-animation: 200ms ease-in 1200ms both lift;
 }
 
-@keyframes starter-wide {
-  0%      { width: 0px; }
-  100%    { width: 50px; }
+/* REVERSE ANIMATION --- */
+
+body.animate-reverse .resume .starter::before {
+
+    -webkit-animation: 100ms ease-in 600ms both starter-wide-reverse;
 }
 
-@keyframes resume-wide {
-  0%      { width: 0px; }
-  100%    { width: 980px; }
+body.animate-reverse .resume::after {
+
+    -webkit-animation: 100ms ease-in 500ms both up-down-reverse;
 }
 
-@keyframes up-down {
-  0%      { top: 145px; height: 0px; }
-  100%    { top: 0px; height: 1936px; }
+body.animate-reverse .resume .section::before,
+body.animate-reverse .resume .heading::before  {
+
+    -webkit-animation: 100ms ease-in 400ms both resume-wide-reverse;
 }
 
-@keyframes down {
-  0%      { height: 0px; }
-  100%    { height: 1936px; }
+body.animate-reverse .resume::before {
+
+    -webkit-animation: 100ms ease-in 300ms both down-reverse;
 }
 
-@keyframes broaden {
-  100%    { border-width: 0 200px; background-color: #A3F1CD; }
+body.animate-reverse {
+
+    -webkit-animation: 100ms ease-in 200ms both broaden-reverse;
 }
 
-@keyframes spread {
-  100%    { margin: 40px 0; }
+body.animate-reverse .resume .section,
+body.animate-reverse .resume .heading {
+
+    margin: 40px 0px;
+    top: -10px;
+    box-shadow: 0 10px 6px -6px #777;
+
+    -webkit-animation: 100ms linear 100ms both lift-reverse;
 }
 
-@keyframes lift {
-    0% { top: 0px; box-shadow: 0 0px 6px -6px #777; }
-    100%    { top: -10px; box-shadow: 0 10px 6px -6px #777; }
+
+@-webkit-keyframes starter-wide {
+    0%    { width: 0px; }
+    100%  { width: 50px; }
 }
 
-/*@keyframes rtl2 {
+@-webkit-keyframes resume-wide {
+    0%    { width: 0px; }
+    100%  { width: 980px; }
+}
+
+@-webkit-keyframes up-down {
+    0%    { top: 145px; height: 0px; }
+    100%  { top: 0px; height: 1936px; }
+}
+
+@-webkit-keyframes down {
+    0%    { height: 0px; }
+    100%  { height: 1936px; }
+}
+
+@-webkit-keyframes broaden {
+    0%    { background-color: transparent; }
+    100%  { background-color: #A3F1CD; }
+}
+
+@-webkit-keyframes lift {
+    0%    { margin: 0px 0px; top: 0px; box-shadow: 0 0 6px -6px #777; }
+    100%  { margin: 40px 0px; top: -10px; box-shadow: 0 10px 6px -6px #777; }
+}
+
+
+@-webkit-keyframes starter-wide-reverse {
+    0%    { width: 50px; }
+    100%  { width: 0px; }
+}
+
+@-webkit-keyframes resume-wide-reverse {
+    0%    { width: 980px; }
+    100%  { width: 0px; }
+}
+
+@-webkit-keyframes up-down-reverse {
+    0%    { top: 0px; height: 1936px; }
+    100%  { top: 145px; height: 0px; }
+}
+
+@-webkit-keyframes down-reverse {
+    0%    { height: 1936px; }
+    100%  { height: 0px; }
+}
+
+@-webkit-keyframes broaden-reverse {
+    0%    { background-color: #A3F1CD; }
+    100%  { background-color: transparent; }
+}
+
+@-webkit-keyframes lift-reverse {
+    0%    { margin: 40px 0px; top: -10px; box-shadow: 0 10px 6px -6px #777; }
+    100%  { margin: 0px 0px; top: 0px; box-shadow: 0 0 6px -6px #777; }
+}
+
+/*@-webkit-keyframes rtl2 {
   0%   { background-image: linear-gradient(to left, white, white); }
   12.5%   { background-image: linear-gradient(to left, white, white 0%, #A3F1CD 12.5%, white 32.5%, white); }
   25.0%   { background-image: linear-gradient(to left, white, white 5.0%, #A3F1CD 25.0%, white 45.0%, white); }

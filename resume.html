@@ -213,13 +213,18 @@ heading: resume
 
 <script>
 
+var animated = false;
+
 document.getElementById('resume-buttons').addEventListener('click', function() {
 
-    document.getElementById('resume').className = 'resume animate';
-    setTimeout(function() {
+  if (!animated) {
+    document.body.className = 'theme-base-sr animate';
+    animated = true;
+  } else {
+    document.body.className = 'theme-base-sr animate animate-reverse';
+    animated = false;
+  }
 
-        document.getElementById('resume').className = 'resume';
-    }, 100000);
 });
 
 </script>
