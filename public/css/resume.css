@@ -2,6 +2,7 @@
 
     position: absolute;
     max-width: 980px;
+    height: auto;
     left: 0;
     right: 0;
     margin: 10px auto;
@@ -17,17 +18,72 @@
 .resume .starter {
 
     height: 10px;
-    width: 40px;
     position: absolute;
     right: -50px;
     top: 145px;
 }
 
-.resume .starter::before,
-.resume .section::before {
+.resume::before {
+
+  content: "";
+  width: 2px;
+  display: block;
+  background-color: #A3F1CD;
+  position: absolute;
+  left: -2px;
+  top: 0;
+}
+
+.resume::after {
+
+  content: "";
+  width: 2px;
+  display: block;
+  background-color: #A3F1CD;
+  position: absolute;
+  right: -2px;
+}
+
+.resume .starter::before {
+
     content: "";
     height: 2px; /*for horizontal border; width for vertical*/
     display: block;
+    background-color: #A3F1CD;
+}
+
+.resume .section {
+
+  position: relative;
+}
+
+.resume .section::before {
+
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: #A3F1CD;
+    /*width: 980px;*/
+    position: absolute;
+    right: -1px;
+    top: -15px;
+}
+
+.resume .heading {
+
+  position: relative;
+}
+
+.resume .heading::before {
+
+    content: "";
+    height: 2px;
+    display: block;
+    background-color: #A3F1CD;
+    /*width: 980px;*/
+    position: absolute;
+    right: -51px;
+    top: -51px;
 }
 
 .resume .buttons {
@@ -133,31 +189,61 @@
     border-top: 1px solid black;
 }
 
-
-/* animate resume */
-
-/*.resume.animate {
-
-    animation: rtl 100ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-}*/
+/* ANIMATION ----- */
 
 .resume.animate .starter::before {
 
-    animation: rtl 200ms;
+    animation: starter-wide 100ms;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
-/*.resume.animate .section::before {
+.resume.animate::after {
 
-    animation: rtl 200ms;
+    animation: up-down 300ms;
     animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
     animation-delay: 100ms;
-}*/
+}
 
-@keyframes rtl {
+.resume.animate .section::before,
+.resume.animate .heading::before  {
+
+    animation: resume-wide 400ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 400ms;
+}
+
+.resume.animate::before {
+
+    animation: down 300ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 800ms;
+}
+
+@keyframes starter-wide {
+  0%      { width: 0px; }
+  100%    { width: 50px; }
+}
+
+@keyframes resume-wide {
+  0%      { width: 0px; }
+  100%    { width: 980px; }
+}
+
+@keyframes up-down {
+  0%      { top: 145px; height: 0px; }
+  100%    { top: 0px; height: 1936px; }
+}
+
+@keyframes down {
+  0%      { height: 0px; }
+  100%    { height: 1936px; }
+}
+
+/*@keyframes rtl2 {
   0%   { background-image: linear-gradient(to left, white, white); }
   12.5%   { background-image: linear-gradient(to left, white, white 0%, #A3F1CD 12.5%, white 32.5%, white); }
   25.0%   { background-image: linear-gradient(to left, white, white 5.0%, #A3F1CD 25.0%, white 45.0%, white); }
@@ -167,4 +253,4 @@
   75.0%   { background-image: linear-gradient(to left, white, white 55.0%, #A3F1CD 75.0%, white 95.0%, white); }
   87.5%   { background-image: linear-gradient(to left, white, white 67.5%, #A3F1CD 87.5%, white 100%, white); }
   100%   { background-image: linear-gradient(to left, white, white); }
-}
+}*/
