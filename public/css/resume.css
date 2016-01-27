@@ -138,6 +138,13 @@
     border-top: 1px solid black;
 }
 
+.more {
+
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+}
+
 /* ANIMATION ----- */
 
 .resume::before {
@@ -193,6 +200,10 @@
     top: -1px;
 }
 
+/* ======================*/
+/* FORWARD ANIMATION --- */
+/* ======================*/
+
 body.animate .resume .starter::before {
 
     -webkit-animation: 100ms ease-in both starter-wide;
@@ -225,7 +236,14 @@ body.animate .resume .heading {
     -webkit-animation: 200ms ease-in 1200ms both lift;
 }
 
+body.animate .more {
+
+    -webkit-animation: 200ms ease-in 1400ms both appear;
+}
+
+/* ======================*/
 /* REVERSE ANIMATION --- */
+/* ======================*/
 
 body.animate-reverse .resume .starter::before {
 
@@ -264,6 +282,15 @@ body.animate-reverse .resume .heading {
 }
 
 
+body.animate-reverse .more {
+
+    -webkit-animation: 100ms ease-in both appear-reverse;
+}
+
+/* ======================*/
+/* ANIMATION --- */
+/* ======================*/
+
 @-webkit-keyframes starter-wide {
     0%    { width: 0px; }
     100%  { width: 50px; }
@@ -294,6 +321,10 @@ body.animate-reverse .resume .heading {
     100%  { margin: 40px 0px; top: -10px; box-shadow: 0 10px 6px -6px #777; }
 }
 
+@-webkit-keyframes appear {
+    0%    { height: 0px; }
+    100%  { height: 200px; }
+}
 
 @-webkit-keyframes starter-wide-reverse {
     0%    { width: 50px; }
@@ -323,6 +354,11 @@ body.animate-reverse .resume .heading {
 @-webkit-keyframes lift-reverse {
     0%    { margin: 40px 0px; top: -10px; box-shadow: 0 10px 6px -6px #777; }
     100%  { margin: 0px 0px; top: 0px; box-shadow: 0 0 6px -6px #777; }
+}
+
+@-webkit-keyframes appear-reverse {
+    0%    { height: 200px; }
+    100%  { height: 0px; }
 }
 
 /*@-webkit-keyframes rtl2 {
