@@ -512,7 +512,7 @@ body.animate-reverse .section > .more {
     z-index: 10;
 }
 
-.resume .more .box img:hover {
+.resume .more .box.screen img:hover {
 
     z-index: 100;
     border: 2px solid #777;
