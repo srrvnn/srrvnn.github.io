@@ -35,7 +35,7 @@ heading: resume
 
         <div class="box invisible"> Secret Message. 5 Points to you!! </div>
 
-        <div class="box invisible"> </div> </div>
+        <div class="box invisible"> I explore the web, and build some of it. </div> </div>
 
     <div class="section education">
 
@@ -213,12 +213,9 @@ heading: resume
 
         <div class="more">
 
-            <img src="{{ site.baseurl }}public/img/stop1.png"/>
-            <img src="{{ site.baseurl }}public/img/stop2.png"/>
-            <img src="{{ site.baseurl }}public/img/stop3.png"/>
-            <img src="{{ site.baseurl }}public/img/stop4.png"/>
-            <img src="{{ site.baseurl }}public/img/stop5.png"/>
-            <img src="{{ site.baseurl }}public/img/stop6.png"/>
+            <img class="stop" src="{{ site.baseurl }}public/img/stop1.png"/>
+            <img class="stop" src="{{ site.baseurl }}public/img/stop5.png"/>
+            <img class="stop" src="{{ site.baseurl }}public/img/stop6.png"/>
 
             <div class="box link">
                 <a href="http://github.com/srrvnn/stop" target="_blank"> <i class="fa fa-github"></i> code </a> </div> </div>
@@ -237,11 +234,9 @@ heading: resume
 
         <div class="more">
 
-            <div class="box"> Hello! </div>
+            <div class="box screen"> <img src="{{ site.baseurl }}public/img/muse1.png"/> </div>
 
-            <div class="box"> <img class="srrvnn" src="{{ site.baseurl }}public/img/srrvnn.jpg"/> </div>
-
-            <div class="box">  </div> </div>
+            <div class="box screen"> <img src="{{ site.baseurl }}public/img/muse2.png"/> </div> </div>
 
         <div class="section-item">
 
@@ -280,11 +275,11 @@ heading: resume
 
         <div class="more">
 
-            <div class="box"> Hello! </div>
+            <div class="box github"> <a href="http://github.com/srrvnn">
+                <img src="{{ site.baseurl }}public/img/opensource.png"/> </a> </div>
 
-            <div class="box"> <img class="srrvnn" src="{{ site.baseurl }}public/img/srrvnn.jpg"/> </div>
-
-            <div class="box">  </div> </div>
+            <div class="box link">
+                <a href="http://github.com/srrvnn" target="_blank"> <i class="fa fa-github"></i> github.com </a> </div> </div>
 
         <div class="section-item">
 
@@ -299,11 +294,10 @@ heading: resume
 
         <div class="more">
 
-            <div class="box"> Hello! </div>
+            <div class="box screen"> <img src="{{ site.baseurl }}public/img/aaptracker1.png"/> </div>
 
-            <div class="box"> <img class="srrvnn" src="{{ site.baseurl }}public/img/srrvnn.jpg"/> </div>
-
-            <div class="box">  </div> </div>
+            <div class="box link">
+                <a href="http://aap-tracker-dev.elasticbeanstalk.com/" target="_blank"> <i class="fa fa-external-link-square"></i> aap-tracker....com </a> </div> </div>
 
         <div class="section-item">
 
@@ -329,8 +323,8 @@ heading: resume
 
 <script>
 
-var animated = true;
-document.body.className = 'theme-base-sr animate';
+var animated = false;
+// document.body.className = 'theme-base-sr animate';
 
 document.getElementById('resume-buttons').addEventListener('click', function() {
 
