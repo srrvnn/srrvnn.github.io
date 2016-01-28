@@ -13,11 +13,11 @@ heading: resume
 
         <ul>
 
-            <li> <i class="fa fa-search"></i> </li>
+            <!-- <li> <i class="fa fa-search"></i> </li> -->
 
             <li> <i class="fa fa-rocket"></i> </li>
 
-            <li> <i class="fa fa-gamepad"></i> </li>
+            <!-- <li> <i class="fa fa-gamepad"></i> </li> -->
 
             <li> <i class="fa fa-download"></i> </li>
 
@@ -33,9 +33,9 @@ heading: resume
 
         <div class="box"> <img class="srrvnn" src="{{ site.baseurl }}public/img/srrvnn.jpg"/> </div>
 
-        <div class="box invisible"> Secret Message. 5 Points to you!! </div>
+        <div class="box invisible"> Resume Excavator, badge unlocked. </div>
 
-        <div class="box invisible"> I explore the web, and build some of it. </div> </div>
+        <div class="box"> </div> </div>
 
     <div class="section education">
 
@@ -323,19 +323,21 @@ heading: resume
 
 <script>
 
-var animated = false;
-// document.body.className = 'theme-base-sr animate';
+var animated = true;
+document.body.className = 'theme-base-sr animate';
 
 document.getElementById('resume-buttons').addEventListener('click', function() {
 
-  if (!animated) {
-    document.body.className = 'theme-base-sr animate';
-    animated = true;
-  } else {
-    document.body.className = 'theme-base-sr animate animate-reverse';
-    animated = false;
-  }
+    if (!animated) {
 
+        document.body.className = 'theme-base-sr animate';
+        animated = true;
+
+    } else {
+
+        document.body.className = 'theme-base-sr animate animate-reverse';
+        animated = false;
+    }
 });
 
 </script>
