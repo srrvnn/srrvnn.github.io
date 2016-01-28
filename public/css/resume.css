@@ -10,8 +10,16 @@
     font-size: 15px;
     color: black;
     box-sizing: content-box;
-    border: solid #A3F1CD;
-    border-width: 0;
+}
+
+body.animate .resume {
+
+    border: none;
+}
+
+body.animate.animate-reverse .resume {
+
+    border: 1px solid #ececec;
 }
 
 .resume .heading {
@@ -140,9 +148,58 @@
 
 .more {
 
-    display: inline-block;
+    display: flex;
     height: 0;
     overflow: hidden;
+    margin: 0 25px;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+body.animate .section .more {
+
+    margin: 0;
+    background: #E8E8E8;
+}
+
+.section .more::after {
+
+    content: "";
+    /* border-top: 0px solid white; */
+    border-left: 3px solid #A3F1CD;
+    border-right: 3px solid #A3F1CD;
+    width: 974px;
+    height: 40px;
+    background-color: #A3F1CD;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 0 10px 2px -6px #777;
+}
+
+.more .box {
+
+    position: relative;
+    display: inline-block;
+
+    margin: 0 20px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: #565656;
+    color: #A3F1CD;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more .box.invisible {
+
+    background-color: transparent;
 }
 
 /* ANIMATION ----- */
@@ -236,9 +293,14 @@ body.animate .resume .heading {
     -webkit-animation: 200ms ease-in 1200ms both lift;
 }
 
-body.animate .more {
+body.animate .resume > .more {
 
     -webkit-animation: 200ms ease-in 1400ms both appear;
+}
+
+body.animate .section > .more {
+
+    -webkit-animation: 200ms ease-in 1400ms both appear-with-border;
 }
 
 /* ======================*/
@@ -282,9 +344,14 @@ body.animate-reverse .resume .heading {
 }
 
 
-body.animate-reverse .more {
+body.animate-reverse .resume > .more {
 
     -webkit-animation: 100ms ease-in both appear-reverse;
+}
+
+body.animate-reverse .section > .more {
+
+    -webkit-animation: 100ms ease-in both appear-with-border-reverse;
 }
 
 /* ======================*/
@@ -322,9 +389,15 @@ body.animate-reverse .more {
 }
 
 @-webkit-keyframes appear {
-    0%    { height: 0px; }
-    100%  { height: 200px; }
+    0%    { height: 0px; margin: 0; }
+    100%  { height: 200px; margin: 20px 0 20px 0; }
 }
+
+@-webkit-keyframes appear-with-border {
+    0%    { height: 0px; margin: 0; }
+    100%  { height: 360px; margin: 20px 0 20px 0; }
+}
+
 
 @-webkit-keyframes starter-wide-reverse {
     0%    { width: 50px; }
@@ -361,6 +434,11 @@ body.animate-reverse .more {
     100%  { height: 0px; }
 }
 
+@-webkit-keyframes appear-with-border-reverse {
+    0%    { height: 350px; }
+    100%  { height: 0px; }
+}
+
 /*@-webkit-keyframes rtl2 {
   0%   { background-image: linear-gradient(to left, white, white); }
   12.5%   { background-image: linear-gradient(to left, white, white 0%, #A3F1CD 12.5%, white 32.5%, white); }
@@ -376,3 +454,19 @@ body.animate-reverse .more {
 /* SHADOW ----- */
 
 
+.resume img.srrvnn {
+
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.resume img.skill-icon {
+
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    padding: 15px;
+    background-color: #565656;
+}
