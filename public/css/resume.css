@@ -72,6 +72,11 @@ body.animate.animate-reverse .resume {
     cursor: pointer;
 }
 
+.resume .buttons li a {
+
+    color: black;
+}
+
 .resume .buttons i {
 
     font-size: 25px;
