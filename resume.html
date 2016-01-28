@@ -16,9 +16,11 @@ heading: resume
 
             <li id="btn-animate"> <i class="fa fa-rocket"></i> </li>
 
+            <li id="btn-animate-reverse"> <i class="fa fa-times"></i> </li>
+
             <!-- <li> <i class="fa fa-gamepad"></i> </li> -->
 
-            <li> <a href="{{ site.baseurl }}public/assets/resume.pdf"
+            <li id="btn-download"> <a href="{{ site.baseurl }}public/assets/resume.pdf"
               download="Saravanan_Ganesh.pdf"> <i class="fa fa-download"></i> </a> </li>
 
         </ul> </div>
@@ -325,21 +327,35 @@ heading: resume
 
 <script>
 
-var animated = false;
-// document.body.className = 'theme-base-sr animate';
+
+var btnAnimate = document.getElementById('btn-animate');
+var btnAnimateReverse = document.getElementById('btn-animate-reverse');
+
+btnAnimateReverse.style.display = 'none';
 
 document.getElementById('btn-animate').addEventListener('click', function() {
 
-    if (!animated) {
+    document.body.className = 'theme-base-sr animate';
 
-        document.body.className = 'theme-base-sr animate';
-        animated = true;
+    setTimeout(function() {
 
-    } else {
+        btnAnimate.style.display = 'none';
+        btnAnimateReverse.style.display = 'block';
 
-        document.body.className = 'theme-base-sr animate animate-reverse';
-        animated = false;
-    }
+    }, 2000);
+
+});
+
+document.getElementById('btn-animate-reverse').addEventListener('click', function() {
+
+    document.body.className = 'theme-base-sr animate animate-reverse';
+
+    setTimeout(function() {
+
+        btnAnimate.style.display = 'block';
+        btnAnimateReverse.style.display = 'none';
+
+    }, 400);
 });
 
 </script>

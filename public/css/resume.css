@@ -87,8 +87,13 @@ body.animate.animate-reverse .resume {
     vertical-align: middle;
     line-height: 50px;
     text-align: center;
+    transition: all 200ms ease-in;
 }
 
+.resume .buttons i:hover {
+
+  border-radius: 15px;
+}
 
 .resume .starter {
 
