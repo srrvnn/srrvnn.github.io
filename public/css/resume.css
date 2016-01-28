@@ -10,6 +10,8 @@
     font-size: 15px;
     color: black;
     box-sizing: content-box;
+    border: 1px solid #ececec;
+
 }
 
 body.animate .resume {
@@ -17,7 +19,6 @@ body.animate .resume {
     border: none;
 }
 
-.resume,
 body.animate.animate-reverse .resume {
 
     border: 1px solid #ececec;
@@ -34,7 +35,6 @@ body.animate.animate-reverse .resume {
     font-size: 28px;
     line-height: 40px;
 }
-
 
 .resume .heading a {
 
@@ -90,13 +90,12 @@ body.animate.animate-reverse .resume {
     height: 10px;
     position: absolute;
     right: -50px;
-    top: 145px;
+    top: 75px;
 }
 
 .resume h5 {
 
     margin: 0;
-    /*margin-top: 30px;*/
     text-transform: uppercase;
 }
 
@@ -407,7 +406,7 @@ body.animate-reverse .section > .more {
 }
 
 @-webkit-keyframes up-down {
-    0%    { top: 145px; height: 0px; }
+    0%    { top: 75px; height: 0px; }
     100%  { top: 0px; height: 1936px; }
 }
 
@@ -448,7 +447,7 @@ body.animate-reverse .section > .more {
 
 @-webkit-keyframes up-down-reverse {
     0%    { top: 0px; height: 1936px; }
-    100%  { top: 145px; height: 0px; }
+    100%  { top: 75px; height: 0px; }
 }
 
 @-webkit-keyframes down-reverse {

@@ -9,13 +9,12 @@ heading: resume
 
     <div class="starter"> </div>
 
-    <div class="buttons" id="resume-buttons">
+    <div class="buttons">
 
         <ul>
-
             <!-- <li> <i class="fa fa-search"></i> </li> -->
 
-            <li> <i class="fa fa-rocket"></i> </li>
+            <li id="btn-animate"> <i class="fa fa-rocket"></i> </li>
 
             <!-- <li> <i class="fa fa-gamepad"></i> </li> -->
 
@@ -323,10 +322,10 @@ heading: resume
 
 <script>
 
-var animated = true;
-document.body.className = 'theme-base-sr animate';
+var animated = false;
+// document.body.className = 'theme-base-sr animate';
 
-document.getElementById('resume-buttons').addEventListener('click', function() {
+document.getElementById('btn-animate').addEventListener('click', function() {
 
     if (!animated) {
 
