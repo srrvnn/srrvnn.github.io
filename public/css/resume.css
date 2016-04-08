@@ -145,10 +145,19 @@ body.animate.animate-reverse .resume {
 }
 
 .section.education .section-heading span,
-.section.experience .section-heading span {
+.section.experience .section-heading span,
+.section.projects .section-heading span {
 
     font-weight: 500;
     float: right;
+}
+
+.section.education .section-heading span.fw-normal,
+.section.experience .section-heading span.fw-normal,
+.section.projects .section-heading span.fw-normal {
+
+    font-weight: normal;;
+    float: none;
 }
 
 .section.contact .section-heading {
@@ -524,6 +533,3 @@ body.animate-reverse .section > .more {
     border-radius: 1px;
     transform: scale(3);
 }
-
-
-
